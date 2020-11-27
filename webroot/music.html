@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		body {
+			height: 1000px;
+			background: #F0F8FF;
+		}
+
+		.background {
+			position: relative;
+			width: 500px;
+			height: 500px;
+			background: url(qilixiang.png);
+			background-size: cover;
+			left: 15%;
+			
+			border-top-left-radius: 100px;
+			overflow: hidden;
+		}
+
+		.music {
+			position: relative;
+			top: 40%;
+			opacity: 0.7;
+			width: 506px;
+			left: 14%;
+		}
+
+		.music_control {
+			color: white;
+			background: red;
+			border: none;
+			outline: none;
+			width: 40px;
+			height: 40px;
+			font-size: 20px;
+			border-radius: 30px;
+			cursor: pointer;
+			transition: background-color 0.2s;
+			text-align: center;
+			position: relative;
+			left: 35%;
+		}
+
+		.end {
+			font-size: 17px;
+			display: none;
+		}
+
+		.music_control:hover {
+			background: rgb(199,33,41);
+		}
+
+		#music_range {
+			width: 100%;
+			display: inlin;
+		}
+
+		.song_box {
+			background: #F0F8FF;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			position: relative;
+			opacity: 0.65;
+		}
+
+		.song_box p {
+			line-height: 28px;
+			text-align: center;
+			cursor: pointer;
+			color: #008B8B;
+			transition: color 0.5s,font-size 0.5s;
+		}
+		.song_box p:hover{
+			color: red;
+			font-size: 20px;
+			border: none;
+			outline: none;
+		}
+		#Music_Box{
+			position: absolute;
+			width: 1200px;
+			top: 10%;
+		}
+		.right{
+			height: 37px;
+			width: 37px;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+	</style>
+
+	<style type="text/css">
+		#song_list{
+			height: 500px;
+			width: 250px;
+			background: beige;
+			opacity: 0.6;
+			position: absolute;
+			top: 0px;
+			left: 680px;
+			
+		}
+		.song_ul{
+			list-style: none;
+			height: 374px;
+			line-height: 36px;
+			font-size: 14px;
+			cursor: pointer;
+			overflow: scroll;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		.song_ul li{
+			transition: color 0.3s,font-size;
+			
+			text-align: center;
+		}
+		.song_ul li:hover{
+			color: #FF0000;
+			font-size: 20px;
+		}
+		.playing{
+			color: #FF0000;
+			font-size: 20px;
+		}
+		.song_title{
+			border-bottom: solid 2px #008B8B;
+			padding: 15px;
+			font-weight: 100;
+			text-align: center;
+			cursor: default;
+			margin-top: 50px;
+		}
+	</style>
+	<body>
+		<div id="Music_Box">
+			<div class="background">
+				<audio id="music_audio" src="musci.mp3"></audio>
+				<div class="song_box">
+					<p>所属专辑：七里香</p>
+					<p>作曲：周杰伦</p>
+					<p>填词：方文山</p>
+					<p>编曲：钟兴民</p>
+					<p>窗外的麻雀，在电线杆上多嘴</p>
+					<p>你说这一句，很有夏天的感觉</p>
+					<p>手中的铅笔，在纸上来来回回</p>
+					<p>我用几行字形容你，是我的谁</p>
+					<p>秋刀鱼的滋味，猫跟你都想了解</p>
+					<p>初恋的香味，就这样被我们寻回</p>
+					<p>那温暖的阳光像刚摘的鲜艳草莓</p>
+					<p>你说你舍不得吃掉这一种感觉</p>
+					<p>雨下整夜，我的爱溢出就像雨水</p>
+					<p>院子落叶，跟我的思念厚厚一叠</p>
+					<p>几句是非，也无法将我的热情冷却</p>
+					<p>你出现在我诗的每一页</p>
+					<p>雨下整夜，我的爱溢出就像雨水</p>
+					<p>窗台蝴蝶，像诗里纷飞的美丽章节</p>
+					<p>我接着写，把永远爱你写进诗的结尾</p>
+					<p>你是我唯一想要的了解</p>
+					<p>雨下整夜，我的爱溢出就象雨水</p>
+					<p>院子落叶，跟我的思念厚厚一叠</p>
+					<p>几句是非，也无法将我的热情冷却</p>
+					<p>你出现在我诗的每一页那饱满的稻穗，幸福了这个季节</p>
+					<p>而你的脸颊像田里熟透的蕃茄</p>
+					<p>你突然对我说七里香的名字很美</p>
+					<p>我此刻却只想亲吻你倔强的嘴</p>
+					<p>雨下整夜，我的爱溢出就像雨水</p>
+					<p>院子落叶，跟我的思念厚厚一叠</p>
+					<p>几句是非，也无法将我的热情冷却</p>
+					<p>你出现在我诗的每一页</p>
+					<p>雨下整夜，我的爱溢出就像雨水</p>
+					<p>窗台蝴蝶，像诗里纷飞的美丽章节</p>
+					<p>我接着写，把永远爱你写进诗的结尾</p>
+					<p>你是我唯一想要的了解</p>
+				</div>
+			</div>
+			<div class="music">
+				<input type="range" name="" id="music_range" min="0" max="100" value="0" />
+				<button type="button"  class="music_control right">◀|</button>
+				
+				<button type="button" id="music_pause" class="star music_control" onclick="check()">&nbsp;▶</button>
+				<button type="button" id="music_star" class="end music_control" onclick="check()">| |</button>
+				
+				<button type="button"  class="music_control right">▶|</button>
+			</div>
+			<div id="song_list">
+				<h1 class="song_title">我的音乐</h1>
+				<ul class="song_ul">
+					<li>稻香</li>
+					<li>龙卷风</li>
+					<li>告白气球</li>
+					<li>黑色毛衣</li>
+					<li class="playing">▶&nbsp;七里香</li>
+					<li>手写的从前</li>
+					<li>爱笑的眼睛</li>
+					<li>爱要怎么说出口</li>
+					<li>巴黎九月</li>
+					<li>丑八怪</li>
+					<li>爱笑的眼睛</li>
+					<li>爱要怎么说出口</li>
+					<li>巴黎九月</li>
+					<li>丑八怪</li>
+				</ul>
+			</div>
+		</div>
+
+		
+	</body>
+	
+	<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		status_star = false
+		update_song=true
+		id = 0
+		id2 = 0
+		music = document.getElementById("music_audio")
+		document.getElementById("music_range").onchange = function() {
+			music.currentTime = getCorrectTime()
+			scroll()
+		}
+
+		function getCorrectTime() {
+			duration = music.duration
+			current_time = parseInt($("#music_range").val()) * duration / 100
+			return current_time
+		}
+
+		function getCorrectRate() {
+			duration = music.duration
+			currenttime = music.currentTime
+			return parseInt(currenttime * 100 / duration)
+		}
+
+		function check() {
+			music.currentTime = getCorrectTime()
+			if (status_star) {
+				status_star = false
+				$("#music_star").css("display", "none")
+				$("#music_pause").css("display", "inline-block")
+				music.pause()
+				window.clearInterval(id)
+				window.clearInterval(id2)
+			} else {
+				status_star = true
+				$("#music_star").css("display", "inline-block")
+				$("#music_pause").css("display", "none")
+				music.play()
+				id = window.setInterval(update, 1000)
+				id2 = window.setInterval(scroll, 1000)
+			}
+		}
+
+		function update() {
+			if (status_star) {
+				$("#music_range").prop("value", getCorrectRate())
+				
+				if (music.currentTime == music.duration) {
+					check()
+				}
+			}
+		}
+
+		function scroll() {
+			if (status_star && update_song) {
+				box = $(".song_box")
+				height = box.prop("scrollHeight")
+				newheight = getCorrectRate() * height / 100
+				box.prop("scrollTop", newheight)
+				
+			}
+		}
+		$(".song_box p").mouseover(function(){
+			update_song=false
+		})
+		$(".song_box p").mouseout(function(){
+			update_song=true
+			scroll()
+		})
+	</script>
+</html>

@@ -1,0 +1,28 @@
+<web-app>
+	<servlet>
+    	    <servlet-name>MyServlet</servlet-name>
+        	<servlet-class>com.wz.myservlet.MyServlet</servlet-class>
+        	<init-param>
+         		<param-name>name</param-name>
+          	 	<param-value>Regan</param-value>
+        	</init-param>
+	        <init-param>
+	            <param-name>passwd</param-name>
+	            <param-value>123456</param-value>
+	        </init-param>
+	</servlet>
+	
+	<servlet>
+    	    <servlet-name>WelcomeServlet</servlet-name>
+        	<servlet-class>com.wz.myservlet.WelComeServlet</servlet-class>
+        	<init-param>
+         		<param-name>name</param-name>
+          	 	<param-value>Regan</param-value>
+        	</init-param>
+	        <init-param>
+	            <param-name>passwd</param-name>
+	            <param-value>123456</param-value>
+	        </init-param>
+	</servlet>
+	
+</web-app>

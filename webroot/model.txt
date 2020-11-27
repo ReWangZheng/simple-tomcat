@@ -1,0 +1,26 @@
+package com.wz.jsp;
+
+import java.io.IOException;
+
+import com.wz.http.HttpPrinter;
+
+public class @class_name@ extends JspServletAbs{
+	
+	@define@
+	public void service(com.wz.myservlet.ServletRequest request, com.wz.myservlet.ServletResponse response) {
+		HttpPrinter out;
+		try {
+			out = response.getPrintWriter();
+			@java_code@
+			out.flush();
+
+						System.out.println("modelµ÷ÊÔ"+count);
+			
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+	};
+}
